@@ -1,65 +1,66 @@
 # QnA Chatbot Using PDF
 
 ## Overview
-This project is focused on developing a Question and Answer (QnA) Chatbot that utilizes PDF documents to answer queries. It's designed to provide an interactive interface for users to ask questions and receive relevant answers extracted from PDF content.
+This project is focused on developing a Question and Answer (QnA) Chatbot that utilizes PDF documents to answer queries. It provides an interactive interface for users to ask questions and receive relevant answers extracted from PDF content.
 
 ## Features
-- **Chatbot GUI**: An interactive Graphical User Interface for easy interaction with the chatbot.
-- **PDF Question Answering**: The ability to process and answer questions based on content available in PDF documents.
-- **Model Training Notebooks**: Jupyter notebooks for training sentence transformer models on specific datasets.
-- **Trained Models**: Includes pre-trained models using sentence transformers for immediate deployment.
+- **Chatbot GUI**: An interactive Graphical User Interface.
+- **PDF Question Answering**: Process and answer questions based on PDF content.
+- **Model Training Notebooks**: Jupyter notebooks for training sentence transformer models.
+- **Trained Models**: Pre-trained models using sentence transformers.
 
 ## Contents
-- `CHATBOT.pptx`: A PowerPoint presentation detailing the chatbot project.
-- `Chatbot_GUI`: Directory containing files for the Chatbot's graphical user interface.
-- `Model_trained`: Contains the trained weights of the transformer models.
-- `pytorch_sbert_training.ipynb`: A Jupyter notebook for training a model using PyTorch and Sentence-BERT (SBERT).
-- `requirements.txt`: Lists all the necessary Python packages required for the project.
-- `sbert_test_c`: Additional model trained earlier weights files.
+- `CHATBOT.pptx`: PowerPoint presentation detailing the chatbot project.
+- `Chatbot_GUI`: Files for the Chatbot's graphical user interface.
+- `Model_trained`: Trained weights of the transformer models.
+- `pytorch_sbert_training.ipynb`: Jupyter notebook for training a model using PyTorch and SBERT.
+- `requirements.txt`: Lists necessary Python packages.
+- `sbert_test_c`: Additional resources or tests related to SBERT.
 - `sentence_transformer_training.ipynb`: Notebook for training sentence transformer models.
-- `testing.ipynb`: A notebook for testing and evaluating both sbert and sentence transformer models.
+- `testing.ipynb`: Notebook for testing and evaluating the models.
 
 ## Installation
-To set up the project environment:
 1. Clone this repository.
 2. Install required packages using `pip install -r requirements.txt`.
 
 ## Usage
 ### Chatbot GUI:
-- To use the Chatbot feature, navigate to the `Chatbot_GUI` directory.
-- Start the application as per the instructions provided within the directory.
+- Navigate to the `Chatbot_GUI` directory.
+- Start the application following the provided instructions.
 - The Chatbot GUI is ready for use upon launch.
 
 ### Sentence Model and GPT API Key:
-- The weights for the customized sentence model are uploaded on Hugging Face and used in our LangChain implementation.
-- After comparing embeddings from the database, the response is sent to the GPT API using a secret key (free trial version).
-- Update the GPT API key in `utils.py` at the start of the Chatbot_GUI folder.
+- Pre-trained sentence model hosted on Hugging Face is integrated within the Chatbot via LangChain.
+- Responses are formulated after comparing embeddings with the database content.
+- GPT API is used with a secret key (free trial version). Update the key in `utils.py` at the start of the Chatbot_GUI folder.
 
-### Working with PDFs:
-- Once the Chatbot is running, you can upload any PDF file.
-- After uploading, you can ask questions from the content of the PDF, and the Chatbot will respond accordingly.
+## Working with PDFs:
+- Chatbot allows PDF uploads.
+- Ask questions based on the PDF's content.
+- Chatbot processes queries and returns answers extracted from the uploaded PDF.
 
 ## Model Training and Weights
 ### Model Weights
-- `Model_trained` Folder: Contains the weights for a transformer model, possibly trained for understanding user queries.
-- `sbert_train` Folder: Stores weights for another model, possibly fine-tuned for fetching and processing responses from PDFs.
+- `Model_trained` Folder: Contains weights for a transformer model, trained for understanding user queries.
+- `sbert_train` Folder: Stores weights for another model, possibly fine-tuned for processing responses from PDFs.
 
 ### Training Notebooks
-- `pytorch_sbert_training.ipynb`: This notebook details the training process of the model in `Model_trained`, using PyTorch and SBERT.
+- `pytorch_sbert_training.ipynb`: Details the training process of the model in `Model_trained`, using PyTorch and SBERT.
 - `sentence_transformer_training.ipynb`: Corresponds to the model in `sbert_train`, outlining the training approach and parameters used.
 
 ## Integrating Models with Chatbot
-- The models are crucial for the chatbot's functionality, with one model handling user queries and the other processing PDF content to generate responses.
+- Models are crucial for the chatbot's functionality, with one handling user queries and the other processing PDF content to generate responses.
 
-### Using Only Chatbot Feature
-#### Chatbot GUI:
-- To use the Chatbot feature without involving the model training aspects, simply navigate to the `Chatbot_GUI` directory.
-- Start the application following the instructions provided within this directory.
-- The Chatbot GUI is ready for immediate use upon launch, facilitating interaction through a user-friendly interface.
+## Using Only Chatbot Feature
+### Chatbot GUI:
+- To use the Chatbot feature without model training, navigate to the `Chatbot_GUI` directory.
+- Start the application following the provided instructions.
+- The Chatbot GUI is ready for immediate use upon launch.
 
-#### Sentence Model and GPT API Key:
-- The pre-trained sentence model, hosted on Hugging Face, is integrated within the Chatbot via our LangChain implementation.
+### Sentence Model and GPT API Key:
+- Pre-trained sentence model integrated within the Chatbot via LangChain.
 - Responses are formulated after comparing embeddings with the database content, then sent through the GPT API using a secret key.
+- Note: The provided GPT API key is a free trial version and may need updating. Locate the key at the start of `utils.py` in the Chatbot_GUI folder to replace it with a new trial or paid version.
 
 ## Contributions
 Contributions to this project are welcome. Please follow the standard fork-and-pull request workflow.
